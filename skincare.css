@@ -1,0 +1,215 @@
+
+.hero-skincare {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 70px 50px;
+    background-color: var(--color-white);
+}
+
+.hero-skincare-text {
+    flex: 1;
+    max-width: 500px;
+}
+
+.hero-skincare-text h1 {
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 20px;
+}
+
+.hero-skincare-text p {
+    font-size: 1rem;
+    color: var(--color-text-light);
+    margin-bottom: 30px;
+}
+
+.hero-image {
+    flex: 1;
+    background-color: var(--color-gray-light);
+    border-radius: 10px;
+    max-height: 430px;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin: 70px 0 45px;
+}
+
+
+
+
+.skincare-products {
+    padding: 0 50px 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+}
+
+.skincare-card {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray);
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.skincare-card:hover {
+    transform: translateY(-6px);
+}
+
+.skincare-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    background-color: var(--color-gray-light);
+}
+
+.skincare-card h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-text);
+    margin: 18px 16px 6px;
+}
+
+.skincare-card p {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-pink-dark);
+    margin: 0 16px 16px;
+}
+
+.skincare-card button {
+    width: calc(100% - 32px);
+    margin: 0 16px 18px;
+    padding: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: var(--color-pink-dark);
+    background-color: var(--color-white);
+    border: 1px solid var(--color-pink-dark);
+    border-radius: 6px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.skincare-card button:hover {
+    background-color: var(--color-pink-dark);
+    color: var(--color-white);
+}
+
+
+
+
+
+.newsletter {
+    background-color: rgb(232, 231, 231);
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.newsletter h2 {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 12px;
+}
+
+.newsletter p {
+    color: var(--color-text-light);
+    margin-bottom: 28px;
+}
+
+.newsletter form {
+    display: flex;
+    justify-content: center;
+    max-width: 450px;
+    margin: 0 auto;
+    background-color: var(--color-white);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.newsletter input {
+    flex: 1;
+    padding: 14px 16px;
+    border: none;
+    font-size: 0.95rem;
+    color: var(--color-text);
+}
+
+.newsletter input:focus {
+    outline: none;
+}
+
+.newsletter button {
+    padding: 14px 26px;
+    background-color: var(--color-pink-dark);
+    color: var(--color-white);
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: opacity 0.3s;
+}
+
+.newsletter button:hover {
+    opacity: 0.85;
+}
+
+
+
+
+@media (max-width: 900px) {
+    .hero-skincare {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 24px;
+    }
+
+    .hero-skincare-text {
+        max-width: 100%;
+    }
+
+    .products-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 560px) {
+    .skincare-products {
+        padding: 0 20px 60px;
+    }
+
+    .products-container {
+        grid-template-columns: 1fr;
+    }
+
+    .newsletter form {
+        flex-direction: column;
+        border-radius: 10px;
+    }
+
+    .newsletter input {
+        text-align: center;
+    }
+}
