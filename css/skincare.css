@@ -1,0 +1,389 @@
+
+.hero-skincare {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 70px 50px;
+    background-color: var(--color-white);
+}
+
+.hero-skincare-text {
+    flex: 1;
+    max-width: 500px;
+}
+
+.hero-skincare-text h1 {
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 20px;
+}
+
+.hero-skincare-text p {
+    font-size: 1rem;
+    color: var(--color-text-light);
+    margin-bottom: 30px;
+}
+
+.hero-image {
+    flex: 1;
+    background-color: var(--color-gray-light);
+    border-radius: 10px;
+    max-height: 430px;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin: 0;
+}
+
+
+
+
+.skincare-products {
+    padding: 0 50px 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+}
+
+.skincare-card {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray);
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.5s;
+}
+
+.skincare-card:hover {
+    transform: translateY(-6px);
+}
+
+.skincare-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    background-color: var(--color-gray-light);
+}
+
+.skincare-card h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-text);
+    margin: 18px 16px 6px;
+}
+
+.skincare-card p {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-pink-dark);
+    margin: 0 16px 16px;
+}
+
+.skincare-card button {
+    width: calc(100% - 32px);
+    margin: 0 16px 18px;
+    padding: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: var(--color-pink-dark);
+    background-color: var(--color-white);
+    border: 1px solid var(--color-pink-dark);
+    border-radius: 6px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.skincare-card button:hover {
+    background-color: var(--color-pink-dark);
+    color: var(--color-white);
+}
+
+
+
+
+
+.newsletter {
+    background-color: rgb(232, 231, 231);
+    text-align: center;
+    padding: 70px 20px;
+    margin-top: 60px;
+}
+
+.newsletter h2 {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 12px;
+}
+
+.newsletter p {
+    color: var(--color-text-light);
+    margin-bottom: 28px;
+}
+
+.newsletter form {
+    display: flex;
+    justify-content: center;
+    max-width: 450px;
+    margin: 0 auto;
+    background-color: var(--color-white);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.newsletter input {
+    flex: 1;
+    padding: 14px 16px;
+    border: none;
+    font-size: 0.95rem;
+    color: var(--color-text);
+}
+
+.newsletter input:focus {
+    outline: none;
+}
+
+.newsletter button {
+    padding: 14px 26px;
+    background-color: var(--color-pink-dark);
+    color: var(--color-white);
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: opacity 0.3s;
+}
+
+.newsletter button:hover {
+    opacity: 0.85;
+}
+
+
+
+
+@media (max-width: 900px) {
+    .hero-skincare {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 24px;
+    }
+
+    .hero-skincare-text {
+        max-width: 100%;
+    }
+
+    .products-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 560px) {
+    .skincare-products {
+        padding: 0 20px 60px;
+    }
+
+    .products-container {
+        grid-template-columns: 1fr;
+    }
+
+    .newsletter form {
+        flex-direction: column;
+        border-radius: 10px;
+    }
+
+    .newsletter input {
+        text-align: center;
+    }
+}
+
+
+
+
+@keyframes slide-in-out {
+  0%   { transform: translateX(-110%); opacity: 0; }
+  15%  { transform: translateX(0); opacity: 1; }
+  85%  { transform: translateX(0); opacity: 1; }
+  100% { transform: translateX(-110%); opacity: 0; }
+}
+
+.cart-toast {
+  animation: slide-in-out 3s ease-in-out;
+}
+
+
+
+
+
+.products {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 30px;;
+}
+
+.product-card {
+    position: relative;
+    background-color: var(--color-white);
+    border-radius: 18px;
+    padding: 30px;
+    height: 300px;
+    margin-top: 110px;
+    text-align: center;
+    transition: 0.1s;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(244, 23, 111, 0.12);
+}
+
+
+
+
+.product-card .image-wrap {
+    border-radius: 14px;
+    overflow: hidden;
+    /* margin: bottom 50px; */
+    background-color: var(--color-gray-light);
+    aspect-ratio: 1 / 1;
+}
+
+.product-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition);
+}
+
+.product-card:hover img {
+    transform: scale(1.08);
+}
+
+.product-card h4 {
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.badge {
+    position: absolute;
+    top: 26px;
+    left: 26px;
+    background-color: var(--color-pink-dark);
+    color: var(--color-white);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 30px;
+    z-index: 2;
+}
+
+.badge.sale {
+    background-color: var(--color-text);
+}
+
+.stars {
+    color:rgb(232, 176, 34);
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+}
+
+.price del {
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--color-text-light);
+    margin-right: 8px;
+}
+
+.new-price {
+    color: var(--color-pink-dark);
+}
+
+.card-btn {
+    display: inline-block;
+    width: 100%;
+    padding: 12px 0;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--color-pink-dark);
+    background-color: var(--color-white);
+    border: 1px solid var(--color-pink-dark);
+    transition: background-color var(--transition), color var(--transition);
+}
+
+.card-btn:hover {
+    background-color:var(--color-pink-dark);
+    color: var(--color-white);
+}
+
+
+.shop-content{
+    padding-bottom: 130px;
+}
+
+
+
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-md);
+    padding: 50px;
+    background-color: var(--color-gray-light);
+    text-align: center;
+}
+
+.feature-card {
+    padding: var(--space-md);
+    border-radius: 16px;
+    transition: background-color var(--transition);
+}
+
+.feature-card:hover {
+    background-color: var(--color-white);
+}
+
+.feature-card i {
+    font-size: 26px;
+    color: var(--color-pink-dark);
+    margin-bottom: 14px;
+}
+
+.feature-card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.feature-card p {
+    font-size: 13px;
+    color: var(--color-text-light);
+}
+
+
